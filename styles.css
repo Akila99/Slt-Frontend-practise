@@ -383,7 +383,7 @@ header{
 
 .form-container{
     background-color: rgb(24, 65, 199);
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 55px;
     width: auto;
     color: white;
@@ -452,5 +452,44 @@ header{
     border-radius: 10px;
     padding: 5px;
     border: none;
-    
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 100vh;
+    padding: 30px 0px 30px 40px ;
+}
+
+.login-img{
+
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    gap: 25px;
+    width: 30vw;
+}
+
+#login-textBox{
+    border-radius: 20px;
+    border: none;
+    width: auto;
+    height: 45.65px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#login-button{
+    border-radius: 40px;
+    border: none;
+    font-size: 23px;
+    height: 45.65px;
+    color: #2430a0;
+    font-weight: 600;
 }
