@@ -382,13 +382,18 @@ header{
 }
 
 .form-container{
-    background-color: rgb(24, 65, 199);
+    background-color: rgb(24, 69, 214);
     border-radius: 40px;
     padding: 55px;
     width: auto;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
 }
 .form-container > h1{
+    align-self: flex-start;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -436,12 +441,6 @@ header{
 
 /*Line 1 */
 
-.line-separator {
-  height: 350px;
-  background-color: white;
-  width: 1.5px;
-}
-
 #button-reg{
     font-family: 'Poppins', sans-serif;
     font-weight: 520;
@@ -452,6 +451,27 @@ header{
     border-radius: 10px;
     padding: 5px;
     border: none;
+}
+
+.login-form-container{
+    background-color: rgb(24, 69, 214);
+    border-radius: 40px;
+    padding: 55px;
+    width: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.login-h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 36px;
+    margin-bottom: 20%;
+    height: auto;
 }
 
 .login-container{
@@ -471,8 +491,8 @@ header{
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-size: 15px;
-    gap: 25px;
+    font-size: 30px;
+    gap: 10px;
     width: 30vw;
 }
 
@@ -492,4 +512,91 @@ header{
     height: 45.65px;
     color: #2430a0;
     font-weight: 600;
+}
+
+.other-login-methods{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-method-separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-method-separator > p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-method-separator >.separator{
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.login-text{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+    color: #ffffff;
+    margin: 0px 10px 0px 10px;
+}
+
+.login-methods{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+
+}
+
+.about-container{
+    display: flex;
+    margin: 40px;
+}
+
+.coulm-container{
+    width: 700px;
+}
+
+.coulm-container > h1{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+    padding-left: 60px;
+    color: rgb(24, 69, 214);
+    width: 30%;
+    margin-bottom: 20px;
+}
+.coulm-container > p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+
+}
+.about-img{
+    height: 400px;
+    position: relative;
+    top: 20%;
+    left: 30%;
+
+}
+
+.coulm-container > button{
+    border-radius: 20px;
+    background-color: #2430a0;
+    padding: 10px;
+    color: #f1f1f1;
+    border: none;
+    font-size: 15px;
+    margin-top:4%;
+    margin-left: 13%;
 }
