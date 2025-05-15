@@ -13,42 +13,35 @@
           <img
             src="./assert/signup image.png"
             alt=""
-            height="600px"
-            width="400px"
+            height="300px"
+            width="300px"
           />
 
           <div class="form-container">
-            <h1>Sign Up</h1>
-            <form action="signUp.html" method="post">
+            <h1 class="">Register</h1>
+            <form class="flex-container" action="signUp.html" method="post">
+              <div class="label-container">
+                <label for="userId">User ID</label>
+                <label for="name">Name</label>
+                <label for="password">Password</label>
+                <label for="Confrim password">Confrim password</label>
+              </div>
+              <div class="line-separator"></div>
+
               <div class="input-container">
+                <input type="text" name="userid" id="textBox" required />
+                <input type="text" name="name" id="textBox" required />
+                <input type="text" name="password" id="textBox" required />
                 <input
                   type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Name"
+                  name="Confrim Password"
+                  id="textBox"
                   required
                 />
               </div>
-              <div class="input-container">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <div class="input-container">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-              <button type="submit">Sign Up</button>
             </form>
+
+            <button id="button-reg" type="submit">Submit</button>
           </div>
         </div>
       </div>
