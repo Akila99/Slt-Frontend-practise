@@ -4,11 +4,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-.wrapper {
-  display: flex;
-  height: 100vh;      /* full screen height */
-}
 
 html, body{
     margin: 0;
@@ -62,7 +57,8 @@ header{
 }
 
 .program-name{
-    color: blue;
+    font-size: 1.45rem;
+    color: rgb(25, 25, 235);
     margin: 9px 0px 10px 20px;
 }
 
@@ -83,7 +79,7 @@ header{
 .links{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1.4rem;
     line-height: 36px;
     color: black;
     text-decoration: none;
@@ -144,7 +140,7 @@ header{
     justify-content: center;
     background-color: white;
     min-height: 70vh;
-    border-top-left-radius: 30px;
+    border-top-left-radius: 40px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -153,7 +149,7 @@ header{
 .container-wrapper{
     display: flex;
     flex-direction: row;
-    gap: 40px; /* space between the two containers */
+    gap: 30px; /* space between the two containers */
     justify-content: center; /* or space-between / space-around depending on layout */
     flex-wrap: wrap; /* optional, for responsiveness */
     height: auto;
@@ -183,7 +179,8 @@ header{
     height: 60px;
     padding: 10px;
     background-color: lightgray; 
-    background-color: rgb(24, 65, 199);
+    /* background-color: rgb(24, 65, 199); */
+    background-color: rgb(25, 25, 235);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     display: flex;
@@ -383,7 +380,7 @@ header{
 }
 
 .form-container{
-    background-color: rgb(24, 69, 214);
+    background-color: rgb(25, 25, 235);
     border-radius: 40px;
     padding: 55px;
     width: auto;
@@ -455,7 +452,7 @@ header{
 }
 
 .login-form-container{
-    background-color: rgb(24, 69, 214);
+    background-color: rgb(25, 25, 235);
     border-radius: 40px;
     padding: 55px;
     width: auto;
@@ -511,7 +508,7 @@ header{
     border: none;
     font-size: 23px;
     height: 45.65px;
-    color: #2430a0;
+    color: rgb(25, 25, 235);
     font-weight: 600;
 }
 
@@ -571,7 +568,7 @@ header{
     font-size: 20px;
     line-height: 36px;
     padding-left: 60px;
-    color: rgb(24, 69, 214);
+    color: rgb(25, 25, 235);
     width: 30%;
     margin-bottom: 20px;
 }
@@ -593,7 +590,7 @@ header{
 
 .coulm-container > button{
     border-radius: 20px;
-    background-color: #2430a0;
+    background-color: rgb(25, 25, 235);
     padding: 10px;
     color: #f1f1f1;
     border: none;
@@ -628,7 +625,7 @@ header{
 /* Button */
 .vacancies-button {
   padding: 15px 25px;
-  background-color: rgb(24, 69, 214);
+  background-color: rgb(25, 25, 235);
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -732,9 +729,9 @@ header{
   width: 120px;
   height: 50px;
   background-color: white;
-  border: 2px solid #2430a0;
+  border: 2px solid rgb(25, 25, 235)0;
   font-size: 1rem;
-  color: #2430a0;
+  color: rgb(25, 25, 235);
   font-weight: 700;
   cursor: pointer;
 }
@@ -764,7 +761,7 @@ header{
     width: 10rem;
     height: 3rem;
     border-radius: 10px;
-    background-color: #2430a0;
+    background-color: rgb(25, 25, 235);
     font-size: 1.25rem;
     color: #eee;
 }
@@ -836,7 +833,7 @@ header{
 .table-titles{
     display: flex;
     justify-content: space-around;
-    background-color: #1728be;
+    background-color: rgb(25, 25, 235);
     color: #f1f1f1;
     font-size: 1.35rem;
     padding: 1rem;
@@ -873,7 +870,7 @@ table {
 }
 
 th {
-  background-color: #1728be;
+  background-color: rgb(25, 25, 235);
   padding: 12px;
   border: 0px solid #ccc;
   color: #f1f1f1;
@@ -955,7 +952,7 @@ thead tr:first-child th:last-child {
     display: flex;
     flex-direction: column;
     gap: 5%;
-    background-color: #1728be;
+    background-color: rgb(25, 25, 235);
     min-height: 100vh;
     margin: 0.6rem 1.25rem 0 1.25rem;
     width: 24rem;
@@ -1063,11 +1060,12 @@ thead tr:first-child th:last-child {
 .job-creation-form{
     display: flex;
     flex-direction: column;
+    align-self: end;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     height: auto;
     width: 70%;
-    position: relative;
-    top: 4rem;
+    /* position: relative;
+    top: 4rem; */
     margin: 0%;
     background-color: #f7f8f8;
     border-radius: 30px;
@@ -1124,7 +1122,7 @@ thead tr:first-child th:last-child {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: #1728be;
+    background-color: rgb(25, 25, 235);
     margin: 0.6rem 1.25rem 0 1.25rem;
     width: 100%;
     max-width: 24rem;
@@ -1134,16 +1132,36 @@ thead tr:first-child th:last-child {
 } 
 
 .jobCreation-background{
-    /* height: 100vh;
-    width: 100%;
     display: flex;
-    gap: 2%; */
-    /* display: flex; */
+    align-items: center;
     height: 100vh;
+    align-self: stretch;
     width: 100%;
-    display: flex;
-    gap: 3%;
-    align-items: center;     
+    gap: 3rem;    
     box-sizing: border-box;
+}
 
+/* Laptops */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* Medium layout - maybe keep sidebar compact */
+
+  .jobCreation-background{
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    margin-bottom: 200px;
+  }
+
+  .job-creation-side-bar {
+    width: 18rem;
+    height: 127vh;
+
+  }
+
+  .job-creation-form {
+    width: 75%;
+  }
+  body{
+    height: auto;
+  }
 }
