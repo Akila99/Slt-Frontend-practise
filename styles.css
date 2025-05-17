@@ -5,6 +5,10 @@
     box-sizing: border-box;
   }
   
+.wrapper {
+  display: flex;
+  height: 100vh;      /* full screen height */
+}
 
 html, body{
     margin: 0;
@@ -16,9 +20,6 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #0e1238
-
-
 }
 .navbar{
     display: flex;
@@ -599,4 +600,550 @@ header{
     font-size: 15px;
     margin-top:4%;
     margin-left: 13%;
+}
+
+
+/*Vacancies*/
+
+/* Heading */
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 40px 0 0 5vw;
+}
+
+/* Background */
+.background-img {
+  background-image: url(./assert/vECANCIES.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Button */
+.vacancies-button {
+  padding: 15px 25px;
+  background-color: rgb(24, 69, 214);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #FAFAFA;
+  border-radius: 40px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+/* Job Apply Form */
+.job-apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Input Elements */
+.input-element {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  color: black;
+  width: 100%;
+}
+
+.input-element label {
+  min-width: 150px;
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.input-element .colon {
+  width: 10px;
+  text-align: center;
+  margin: 0 8px;
+}
+
+.input-element input {
+  flex: 1;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 200px;
+}
+
+/* DropDown Container */
+.dropDown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.dropDown-container p {
+  margin-bottom: 1rem;
+}
+
+/* Upload Area */
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 700px;
+  min-height: 200px;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.upload-area p {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  color: #aaa;
+  margin: 0;
+}
+
+.upload-area p > button {
+  width: 120px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid #2430a0;
+  font-size: 1rem;
+  color: #2430a0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.upload-area.hover {
+  border-color: #333;
+  background-color: #eee;
+}
+
+#file-input {
+  display: none;
+}
+
+.file-name {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.vacancy-form-submit{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #2430a0;
+    font-size: 1.25rem;
+    color: #eee;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.25rem;
+    margin-left: 3vw;
+  }
+
+  .input-element {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-element label,
+  .input-element input {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .upload-area {
+    padding: 15px;
+  }
+
+  .vacancies-button {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+
+  .dropDown-container {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1rem;
+  }
+
+  .job-apply-form {
+    padding: 1.5rem;
+  }
+
+  .upload-area p > button {
+    width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+.job-status-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    margin: 40px 70px;
+    padding: 2rem ;
+    height: auto;
+}
+
+.job-status-container h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+.table-titles{
+    display: flex;
+    justify-content: space-around;
+    background-color: #1728be;
+    color: #f1f1f1;
+    font-size: 1.35rem;
+    padding: 1rem;
+    border-radius: 30px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.table-container{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    padding: 1rem;
+    margin-top: 30px;
+    background-color: #f1f1f1;
+}
+
+.table-titles tr:nth-child(even){background-color:#ad3333;}
+
+
+
+table {
+  border-collapse: separate; /* Required for border-radius to work */
+  border-spacing: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  border-spacing: 0 30px;
+}
+
+th {
+  background-color: #1728be;
+  padding: 12px;
+  border: 0px solid #ccc;
+  color: #f1f1f1;
+  font-size: 15px;
+  
+}
+
+tbody td{
+    background-color: #ece6e6;
+    padding: 12px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+/* Rounded top-left and top-right corners */
+thead tr:first-child th:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius:20px ;
+}
+
+thead tr:first-child th:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius:20px ;
+}
+
+/* .admin-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-background{
+    display: flex;
+}
+
+ .side-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    background-color: #2430a0;
+    min-height: 100vh;
+    margin: 0.6rem 1.25rem 0 1.25rem;
+    min-width: 27rem;
+    flex-shrink: 1;
+} */
+
+/* .admin-coulmns{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: #ece6e6;
+    text-decoration: none;
+    position: relative;
+    top: 20%;
+}  */
+
+.admin-background-image{
+    background-image: url(./assert/admin-image.png);
+    height: 100vh;
+    width: 100vw;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.admin-background{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    /* display: flex; */
+}
+
+ .side-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    background-color: #1728be;
+    min-height: 100vh;
+    margin: 0.6rem 1.25rem 0 1.25rem;
+    width: 24rem;
+    min-width: 20rem;
+    padding-left: 1%;
+
+} 
+
+.nav-container{
+    
+}
+
+.side-bar-options{
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    height: 50rem;
+}
+
+.admin-coulmns{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0rem;
+    font-size: 1.5rem;
+    color: #ece6e6;
+    text-decoration: none;
+    position: relative;
+    top: 20%;
+} 
+
+.modification-table{
+    width: 70%;
+    position: relative;
+    top: 100px;
+    margin: 0%;
+}
+
+.search-bar-div{
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-bar{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid black;
+    width: 25rem;
+    border-radius: 30px;
+    
+}
+
+.search-bar input{
+    background-color: #f5f3f3;
+    width: 21rem;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
+.bi-search{
+    background-color: #000000;
+    height: 40px;
+    width: 40px;
+    border-radius:100% ;
+    padding: 10px;
+}
+
+.recieved-cv-container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    height: 30rem;
+    width: 70%;
+    position: relative;
+    top: 20%;
+    margin: 0%;
+    background-color: #f7f8f8;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.recieved-cv-container h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+
+}
+.recieved-cv-table{
+
+    /* width: 70%;
+    position: relative;
+    top: 100px;
+    margin: 0%; */
+}
+
+
+.job-creation-form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    height: auto;
+    width: 70%;
+    position: relative;
+    top: 4rem;
+    margin: 0%;
+    background-color: #f7f8f8;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.first-row{
+    display: flex;
+    gap: 10%;
+    margin-bottom: 2%;
+}
+
+.job-creation-input-container{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.job-creation-input-container input{
+    border-radius: 15px;
+    border: 1px solid black;
+    height: 40px;
+    width: 20rem;
+    padding: 20px;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-top: 3%;
+
+}
+#jobDes{
+    border-radius: 15px;
+    border: 1px solid black;
+    height: 40px;
+    width: 40rem;
+    padding: 20px;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-top: 3%;
+}
+
+/* .job-creation-background-image{
+    height: 100vh;
+    width: 100vw;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+
+} */
+
+ .job-creation-side-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #1728be;
+    margin: 0.6rem 1.25rem 0 1.25rem;
+    width: 100%;
+    max-width: 24rem;
+    min-width: 16rem;
+    padding-left: 1rem;
+    height: 100%;
+} 
+
+.jobCreation-background{
+    /* height: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 2%; */
+    /* display: flex; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    gap: 3%;
+    align-items: center;     
+    box-sizing: border-box;
+
 }

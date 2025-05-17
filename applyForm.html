@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="background-img">
+      <header class="header">
+        <div class="navbar">
+          <!-- <img class="logo" src="" alt="slt logo" /> -->
+          <div class="company-name">
+            <img
+              class="logo"
+              src="./assert/SLTMobitel_Logo.png.webp"
+              alt="slt logo"
+            />
+            <h1 class="program-name">Traning program</h1>
+          </div>
+          <nav class="nav-links">
+            <a class="links" href="./jobstatus.html">Job Status</a>
+            <span class="separator">|</span>
+            <a class="links" href="#">Apply for job</a>
+            <span class="separator">|</span>
+            <a class="links" href="#services">Jobs for you</a>
+            <span class="separator">|</span>
+            <a class="links" href="./home.html">Home</a>
+            <span class="separator">|</span>
+            <a class="links" href="#">Login</a>
+          </nav>
+        </div>
+      </header>
+      <div class="job-apply-form">
+        <div class="input-element">
+          <label for="job_Title">Job Title</label>
+          <p class="colon">:</p>
+          <p id="jobDisplay">Loading......</p>
+          <!-- <input
+            type="text"
+            name="jobDisplay"
+            class="jobDisplay"
+            id="jobDisplay"
+            readonly
+          /> -->
+        </div>
+
+        <div class="input-element">
+          <label style="color: black" for="name">Name with initials</label>
+          <p class="colon">:</p>
+          <input type="text" name="name" id="name" required />
+        </div>
+
+        <div class="input-element">
+          <label for="full-name">Full Name</label>
+          <p class="colon">:</p>
+          <input type="text" name="full-name" id="full-name" required />
+        </div>
+
+        <div class="input-element">
+          <label for="gender">Gender</label>
+          <p class="colon">:</p>
+          <input type="text" name="gender" id="gender" required />
+        </div>
+
+        <div class="input-element">
+          <label for="dob">Data of Birth</label>
+          <p class="colon">:</p>
+          <input type="text" name="dob" id="dob" required />
+        </div>
+
+        <div class="input-element">
+          <label for="email">Email</label>
+          <p class="colon">:</p>
+          <input type="text" name="email" id="email" required />
+        </div>
+
+        <div class="input-element">
+          <label for="num">Contact Number</label>
+          <p class="colon">:</p>
+          <input type="text" name="num" id="num" required />
+        </div>
+
+        <div class="input-element">
+          <label for="field">Field</label>
+          <p class="colon">:</p>
+          <input type="text" name="field" id="field" required />
+        </div>
+
+        <div class="dropDown-container">
+          <p>Upload your CV here</p>
+          <div class="upload-area" id="upload-area">
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                class="bi bi-cloud-upload"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708z"
+                />
+              </svg>
+              Drag & Drop File Here<br />or<br /><button
+                onclick="document.getElementById('file-input').click()"
+              >
+                Browse Here
+              </button>
+            </p>
+            <input type="file" id="file-input" />
+            <div class="file-name" id="file-name"></div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="vacancy-form-submit">Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Javascipt -->
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const jobTitle = params.get("job");
+      const jobDisplay = document.getElementById("jobDisplay");
+
+      if (jobDisplay) {
+        jobDisplay.innerText = jobTitle || "No job title found";
+      }
+
+      console.log("Job title:", jobTitle);
+      console.log("jobDisplay element:", jobDisplay);
+      console.log("URL:", window.location.href);
+      console.log("Query job title:", jobTitle);
+
+      const uploadArea = document.getElementById("upload-area");
+      const fileInput = document.getElementById("file-input");
+      const fileNameDisplay = document.getElementById("file-name");
+
+      // Handle drag over
+      uploadArea.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        uploadArea.classList.add("hover");
+      });
+
+      // Handle drag leave
+      uploadArea.addEventListener("dragleave", () => {
+        uploadArea.classList.remove("hover");
+      });
+
+      // Handle drop
+      uploadArea.addEventListener("drop", (e) => {
+        e.preventDefault();
+        uploadArea.classList.remove("hover");
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+      });
+
+      // Handle file browse
+      fileInput.addEventListener("change", () => {
+        handleFiles(fileInput.files);
+      });
+
+      function handleFiles(files) {
+        if (files.length > 0) {
+          fileNameDisplay.textContent = `Selected File: ${files[0].name}`;
+        }
+      }
+    </script>
+  </body>
+</html>
